@@ -9,7 +9,7 @@ spec:
         app: tomcat
     spec:
       containers:
-      - image: rajusw804/tomcat:v1
+      - image: rajusw804/tomcat:v2
         name: tomcat
         env:
         - name: MONGO
