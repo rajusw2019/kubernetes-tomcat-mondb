@@ -1,0 +1,26 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: tomcat
+spec:
+  template:
+    metadata:
+      labels:
+        app: tomcat
+    spec:
+      containers:
+      - image: rajusw804/tomcat:v1
+        name: tomcat
+        env:
+        - name: MONGO
+          value: mongo
+        - name: POSTGRES_PORT
+          value: "27017"
+        - name: MONGO_INITDB_DATABASE
+          value: test
+        - name: MONGO_INITDB_ROOT_USERNAME
+          value: admin
+        - name: MONGO_INITDB_ROOT_PASSWORD
+          value: admin
+        ports:
+        - containerPort: 8080
