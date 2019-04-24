@@ -1,16 +1,17 @@
-apiVersion: apps/v1beta1
+apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: tomcat
+  name: petclinic
 spec:
+  replicas: 1
   template:
     metadata:
       labels:
-        app: tomcat
+        app: petclinic
     spec:
       containers:
-      - image: rajusw804/tomcat:v2
-        name: tomcat
+      - name: petclinic
+        image: rajusw804/tomcat:v2
         env:
         - name: MONGO
           value: mongo
