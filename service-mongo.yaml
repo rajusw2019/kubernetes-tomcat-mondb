@@ -3,7 +3,9 @@ kind: Service
 metadata:
   name: mongo
 spec:
+  type: NodePort
   ports:
   - port: 27017
+    nodePort: 30181
   selector:
     app: mongo
