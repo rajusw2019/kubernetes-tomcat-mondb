@@ -12,11 +12,5 @@ spec:
       containers:
       - name: mongo
         image: rajusw804/mongo:v2
-        env:
-        - name: MONGO_INITDB_DATABASE
-          value: test
-        - name: MONGO_INITDB_ROOT_USERNAME
-          value: admin
-        - name: MONGO_INITDB_ROOT_PASSWORD
         ports:
         - containerPort: 27017
