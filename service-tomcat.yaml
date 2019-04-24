@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: tomcat
+  name: petclinic-svc
+  labels:
+    app: petclinic
 spec:
   type: NodePort
   ports:
-    - nodePort: 31317
-      port: 8080
-      protocol: TCP
-      targetPort: 8080
+  - port: 8080
+    nodePort: 31317
   selector:
-    app: tomcat
+    app: petclinic
