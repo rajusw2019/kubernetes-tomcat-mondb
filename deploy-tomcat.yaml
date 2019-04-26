@@ -13,7 +13,7 @@ spec:
       - name: petclinic
         image: rajusw804/tomcat:v2
         env:
-        - name: MONGO
+        - name: MONGO_HOST
           value: mongo
         - name: MONGO_PORT
           value: "27017"
